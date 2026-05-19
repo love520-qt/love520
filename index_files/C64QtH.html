@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://daima.se22.cn/C64QtH -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>限定礼物🎁</title>
+    <meta name="description" content="眼里有光，生活带风💐💐
+✨天天开心，事事如意✨
+工作顺利，事业蒸蒸日上🔖🔖
+✨你值得被世界温柔以待✨
+依旧热烈灿烂🌷🌷
+🌹🌹愿你成为自己喜欢的样子
+🍁不抱怨 不将就 有自由 有光芒🍁
+🌈 愿你的每一天都比前一天更精彩芒🌈
+🌞 每一步都走得坚强而优雅🌞
+❤️ 心中永远充满希望和梦想
+ 💐愿你如精灵般可爱🌼
+🪐 生活永远星光满满✨
+愿你永远被爱，永远自由，永远做自己的小太阳💐💐
+希望你永远有奔赴山海的勇气，也有被世界温柔以待的幸运🌸🌸
+🕯愿你在平凡的日子里，也能找到闪闪发光的快乐🍰 
+愿你所有的温柔，都能被好好珍藏 ɢᵒᵒᵈɴⁱᵍʰᵗ✩🌕ིྀ
+日子慢慢来，一切都会变得更好🎵☘️
+​🎈保持热爱，奔赴下一场山海🎈
+🌟 心有繁花，步步生香🌟
+心有山海，静而不争；目有星辰，光芒万丈🎀🎀
+桃之夭夭，灼灼其华；愿你明媚，不负韶华🌺🌺
+🌻蕙质兰心，清雅自持🌻
+静若清池，动如涟漪☘️☘️
+​明眸善睐，岁月温柔💐💐
+​气质如兰，自在安然🌸🌸
+🌷云想衣裳花想容，春风拂槛露华浓🌷
+若似月轮终皎洁，不辞冰雪为卿热🍃🍃">
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./font_3300257_wbsl9bthm4.css">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #f6f6f6;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .iframe-div {
+            width: 100%;
+            height: 100vh;
+            border: 0;
+            display: block;
+            background: transparent;
+        }
+
+        #seo-content {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0.01;
+            pointer-events: none;
+        }
+
+        .page-tips {
+            position: fixed;
+            left: 0;
+            bottom: 6px;
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            color: rgba(255,255,255,0.28);
+            z-index: 2;
+            pointer-events: none;
+            letter-spacing: 0.5px;
+        }
+
+        #moreLink,
+        #makeLink {
+            position: fixed !important;
+            right: 12px !important;
+            width: 42px !important;
+            height: 42px !important;
+            border: 2px solid rgba(255,255,255,.9) !important;
+            border-radius: 50% !important;
+            background: rgba(0,0,0,.28) !important;
+            color: #fff !important;
+            text-decoration: none !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 999999 !important;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            opacity: 0.92 !important;
+            transition: opacity .2s ease;
+            -webkit-tap-highlight-color: transparent;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+
+        #moreLink { bottom: 72px !important; }
+        #makeLink { bottom: 126px !important; }
+
+        #moreLink:active,
+        #makeLink:active {
+            opacity: 0.7 !important;
+        }
+
+        #moreLink i,
+        #makeLink i {
+            font-size: 20px !important;
+            line-height: 1 !important;
+            display: inline-block !important;
+        }
+
+        #musicBtn {
+            position: fixed !important;
+            left: 12px !important;
+            bottom: 72px !important;
+            width: 42px !important;
+            height: 42px !important;
+            z-index: 999999 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            -webkit-tap-highlight-color: transparent;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+
+        #musicBtn img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            animation: musicRotate 6s linear infinite;
+            animation-play-state: paused;
+        }
+
+        #musicBtn.playing img {
+            animation-play-state: running;
+        }
+
+        .open-box[style*="display: none"] {
+            pointer-events: none !important;
+        }
+
+        [style*="display:none"].open-box,
+        [style*="display: none"].open-box {
+            pointer-events: none !important;
+        }
+
+        @keyframes musicRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+
+<script src="./hm.js"></script></head>
+<body>
+
+<div id="seo-content">
+    <h1>限定礼物🎁</h1>
+    <p>眼里有光，生活带风💐💐
+✨天天开心，事事如意✨
+工作顺利，事业蒸蒸日上🔖🔖
+✨你值得被世界温柔以待✨
+依旧热烈灿烂🌷🌷
+🌹🌹愿你成为自己喜欢的样子
+🍁不抱怨 不将就 有自由 有光芒🍁
+🌈 愿你的每一天都比前一天更精彩芒🌈
+🌞 每一步都走得坚强而优雅🌞
+❤️ 心中永远充满希望和梦想
+ 💐愿你如精灵般可爱🌼
+🪐 生活永远星光满满✨
+愿你永远被爱，永远自由，永远做自己的小太阳💐💐
+希望你永远有奔赴山海的勇气，也有被世界温柔以待的幸运🌸🌸
+🕯愿你在平凡的日子里，也能找到闪闪发光的快乐🍰 
+愿你所有的温柔，都能被好好珍藏 ɢᵒᵒᵈɴⁱᵍʰᵗ✩🌕ིྀ
+日子慢慢来，一切都会变得更好🎵☘️
+​🎈保持热爱，奔赴下一场山海🎈
+🌟 心有繁花，步步生香🌟
+心有山海，静而不争；目有星辰，光芒万丈🎀🎀
+桃之夭夭，灼灼其华；愿你明媚，不负韶华🌺🌺
+🌻蕙质兰心，清雅自持🌻
+静若清池，动如涟漪☘️☘️
+​明眸善睐，岁月温柔💐💐
+​气质如兰，自在安然🌸🌸
+🌷云想衣裳花想容，春风拂槛露华浓🌷
+若似月轮终皎洁，不辞冰雪为卿热🍃🍃</p>
+</div>
+
+<div id="container">
+    <iframe id="myframe" class="iframe-div" loading="lazy" width="100%" src="./index.html" style="width:100%;height:100vh;border:0;display:block;" sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-autoplay" allow="autoplay; fullscreen" referrerpolicy="no-referrer"></iframe>
+<!--
+    <a id="moreLink" href="http://gnoo.cn/maps" aria-label="更多内容">
+        <i class="iconfont icon-gengduo-copy"></i>
+    </a>
+
+    <a id="makeLink" href="#" aria-label="立即制作">
+        <i class="iconfont icon-bianji1"></i>
+    </a>
+-->
+    
+
+    
+    <div id="musicBtn" style="display: flex;">
+        <img class="roll" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAQAAAC0jZKKAAAELElEQVRIx72X7UtbdxTHP/femCVprVm2dI4MMZpEUDqYMKJtHG6zCsJ84QZb90KRFTryeuk/kb2WFQpWC7Ww1kKhGwuOleqqebFS5xBifKISdKazUbs8iDd3L3LVqPfmoWw7eZN7zu9+cu7J73fu9wgUMcVNIw04sGMC0sSJEWFOiBa+TyiI7KRNtmhHpSQThPTxOmClmX7ZWexpQFpmWHhSIlipwy979q9WUlM7j3dm0wu7iSxYRZfxnOl8ZWtlrfkAPs+gsFQUrLQSkA0AqexYfDAeTmvn6jX57b12swgg7REUpgqClc/kvty30Y1AbF0uXIhqKei4dFbNe0S4owtW+uVPAdYyA4vjyeIVBuiwDNW//RqAdFcY1gTvZzu91bO4mS0NC2AT79e3VB3PWjysbQ4b2myPloOFzWx7NLQJIPcprcfASh2BXLbdS3u6iO8//M6r5d+je2l6C4CAUnc0Y79sgLVMz2Kh3Gps772jF+tZXMuAbMCfB1aac/t2oEhtE0lPjX5BBhYBZI/SfJhxP8DoRrGdsJqwWt8y6kXHk6MbhzQRFLfshFQ2EKOIbWfg0Zf68UAslQXZqbhzGXcCjMWLHQcwCOBxhrr14uvyWBxyRBFoAxiMF8MCyHtw0Xv/ol5cpbSBqLhlC6yk9HpCvjmqbox/PbSy+olPe9tBOL2SAtmiuEUaAaZ2SsnXVLGdubbivH7v0ZXu3mod9DYAjSINAFMvSypE1lIB0Pvz3MLty9prfv0bgAYRB8DvqVLAh9Z0s6LiqkcropIcInaAhd3ywBBZ+uq8ll8l2UVMAImy2g5AeMFo0PKrJJNYFi3PnidfFPzDRdIA1rJ/oMoU39byq6S0SBzAZSyDCUB15R/rWn6VFBeJAbxrLoMJgNl4LaLlV0kxkQjAhVPlYa96Esl5zV6okiIicwDeM6XgXiTNBoDTUofr+qz2GpU0ZxCiSlK21Jq9Jv1u0WLtc9e8/izhsoefAZySbsz8qNm0vKZaM0hJIWoAJugCvz28qo0d/eDzjwT1bT7yFODP3Vs6vdtvB2Ai1zZDAL32aklr6YOuLz4WDkRCZUWhUlVLvTlwCEQQotIymMWg4+TSK7XdRw7ub5uFwEGHWQRpWYjuv/OGAS6d7TghWS+/n3/1+Okvf+lj2y2q3BoGFSw8keYBhuptx05gKLKb2f9Mz1y4p4+1iTfrAaT5nKxVq6fU8a1sgOktXxGlrmeT7pYqkPb4Jidp1QyFJYIALVU/1L0K9oEzp94I7ivlg0cXpqQRgE7bQ5etrJZkEx+6ut4AkEYOVXIeQrgj3QXwWWea2i2lYtstM00+K4A0lq+Q/z3hfUu4nR/7v0YFODnchLcnX86mF3afy/Cm5DKeM/lOe8+UPdyo8P9iHDuAu+nCV2CAnOSnsgfII/hXGnn/AachjVCELR1AAAAAAElFTkSuQmCC">
+        <audio id="music" src="https://hw.a.yximgs.com/bs2/ost/MTE2MTg4ODM1NTA5XzI2MTk5NzE4NTg.m4a" loop="loop" playsinline="" webkit-playsinline="" x5-playsinline="" preload="auto"></audio>
+    </div>
+</div>
+
+<div class="page-tips">内容仅供展示与娱乐</div>
+
+<script>
+window.templateData = {"id":674507,"appid":1,"domainId":34,"openid":"obudw3YV53E0YTYn_SZ8r7nNvdKI","templateId":53,"msgId":0,"nid":"C64QtH","url":"http://k12w.com/C64QtH","title":"限定礼物🎁","ftitle":"你有一份限定款神秘礼物，确定要打开吗？","ftitle2":"","ctitle":"","mtitle":"","content":"眼里有光，生活带风💐💐\r\n✨天天开心，事事如意✨\r\n工作顺利，事业蒸蒸日上🔖🔖\r\n✨你值得被世界温柔以待✨\r\n依旧热烈灿烂🌷🌷\r\n🌹🌹愿你成为自己喜欢的样子\r\n🍁不抱怨 不将就 有自由 有光芒🍁\r\n🌈 愿你的每一天都比前一天更精彩芒🌈\r\n🌞 每一步都走得坚强而优雅🌞\r\n❤️ 心中永远充满希望和梦想\r\n 💐愿你如精灵般可爱🌼\r\n🪐 生活永远星光满满✨\r\n愿你永远被爱，永远自由，永远做自己的小太阳💐💐\r\n希望你永远有奔赴山海的勇气，也有被世界温柔以待的幸运🌸🌸\r\n🕯愿你在平凡的日子里，也能找到闪闪发光的快乐🍰 \r\n愿你所有的温柔，都能被好好珍藏 ɢᵒᵒᵈɴⁱᵍʰᵗ✩🌕ིྀ\r\n日子慢慢来，一切都会变得更好🎵☘️\r\n​🎈保持热爱，奔赴下一场山海🎈\r\n🌟 心有繁花，步步生香🌟\r\n心有山海，静而不争；目有星辰，光芒万丈🎀🎀\r\n桃之夭夭，灼灼其华；愿你明媚，不负韶华🌺🌺\r\n🌻蕙质兰心，清雅自持🌻\r\n静若清池，动如涟漪☘️☘️\r\n​明眸善睐，岁月温柔💐💐\r\n​气质如兰，自在安然🌸🌸\r\n🌷云想衣裳花想容，春风拂槛露华浓🌷\r\n若似月轮终皎洁，不辞冰雪为卿热🍃🍃","nextContent":"","sectionContent":"","coverImg":"","backgroundImg":"https://web-img.zf2026.cn/static/images/demo/2567-1.webp","video":"","confirmImg":"","opacity":100,"music":"https://hw.a.yximgs.com/bs2/ost/MTE2MTg4ODM1NTA5XzI2MTk5NzE4NTg.m4a","printIcon":"","color":"","fontSize":1,"fontSpeed":1,"btnTitle1":"","btnTitle2":"","password":"","status":1,"payType":3,"isDemo":0,"checkStatus":0,"checkScore":0,"txtType":0,"sort":200,"note":"","views":0,"ip":"172.16.0.88","fromDemoId":480,"create_time":1779165355,"update_time":1779165355,"templateInfo":{"id":53,"path":"template/barrage/total","viewport":"","pcWidth":"","autoplay":0,"autobtn":0},"msgHtml":"","typeId":2,"versionId":1779199489,"jump_more":"http://gnoo.cn/maps","jump_make":"weixin://dl/business/?appid=wx92ef5038fdff5bb5&path=pages/index/index&query=channel","4041":true,"isAllowedDomain1":1};
+</script>
+
+
+<script src="./jweixin-1.3.2.js"></script>
+<script src="./mp.js"></script>
+<script src="./script.js"></script>
+
+<script>
+    const myFrame = document.getElementById('myframe');
+    const makeLinkBtn = document.getElementById('makeLink');
+    const moreLinkBtn = document.getElementById('moreLink');
+    const music = document.getElementById('music');
+    const musicBtn = document.getElementById('musicBtn');
+
+    let backBtn = null;
+    let makeBtn = null;
+    let iframeInited = false;
+    let outerMusicDisabled = false;
+    const TEMPLATE_IFRAME_HOST = 'https://daima.se22.cn';
+    const forceMiniProgramView = location.search.indexOf('from_mp=1') > -1;
+    if (forceMiniProgramView) {
+        const hideH5BtnsStyle = document.createElement('style');
+        hideH5BtnsStyle.textContent = '#makeLink,#moreLink{display:none !important;}';
+        document.head.appendChild(hideH5BtnsStyle);
+    }
+
+    function getSafeTemplateData() {
+        return window.templateData || {};
+    }
+
+    function getNestedValue(obj, path) {
+        try {
+            return path.split('.').reduce((acc, key) => acc && acc[key], obj);
+        } catch (e) {
+            return undefined;
+        }
+    }
+
+    function firstNotEmpty(list) {
+        for (let i = 0; i < list.length; i++) {
+            const v = list[i];
+            if (v !== undefined && v !== null && String(v).trim() !== '') {
+                return v;
+            }
+        }
+        return '';
+    }
+
+    function getCurrentNid() {
+        const td = getSafeTemplateData();
+        const nid = firstNotEmpty([
+            td.nid,
+            td.data && td.data.nid,
+            td.templateData && td.templateData.nid
+        ]);
+        if (nid) return String(nid).trim();
+
+        const match = String(location.pathname || '').match(/\/([A-Za-z0-9]{4,16})\/?$/);
+        return match ? match[1] : '';
+    }
+
+    function withMiniProgramSource(url) {
+        if (!url) return url;
+
+        const nid = getCurrentNid();
+        if (!nid || String(url).indexOf('weixin://dl/business/') !== 0) {
+            return url;
+        }
+
+        try {
+            const parsed = new URL(url);
+            const miniQuery = new URLSearchParams(parsed.searchParams.get('query') || '');
+            if (!miniQuery.get('fromHost')) {
+                miniQuery.set('fromHost', location.hostname || '');
+            }
+            if (!miniQuery.get('fromNid')) {
+                miniQuery.set('fromNid', nid);
+            }
+            if (!miniQuery.get('refNid')) {
+                miniQuery.set('refNid', nid);
+            }
+            parsed.searchParams.set('query', miniQuery.toString());
+            return parsed.toString().replace(/([?&]path=)([^&]+)/, function (_, prefix, value) {
+                try {
+                    return prefix + decodeURIComponent(value);
+                } catch (e) {
+                    return prefix + value;
+                }
+            });
+        } catch (e) {
+            const joiner = url.indexOf('query=') > -1 ? '%26' : '&query=';
+            const sourceQuery = 'fromHost%3D' + encodeURIComponent(location.hostname || '') +
+                '%26fromNid%3D' + encodeURIComponent(nid) +
+                '%26refNid%3D' + encodeURIComponent(nid);
+            return url + joiner + sourceQuery;
+        }
+    }
+
+    function isDemoMode() {
+        return location.search.indexOf('is_demo=1') > -1;
+    }
+
+    function shouldHideButtons() {
+        return isDemoMode() ||
+            location.search.indexOf('hide_btns=1') > -1 ||
+            location.search.indexOf('hideBtns=1') > -1;
+    }
+
+    function hasMiniProgramRuntimeFlag() {
+        try {
+            if (String(window.__wxjs_environment || '').toLowerCase() === 'miniprogram') {
+                return true;
+            }
+        } catch (e) {}
+
+        const ua = String(navigator.userAgent || '').toLowerCase();
+        return ua.indexOf('miniprogram') > -1 || ua.indexOf('mini program') > -1;
+    }
+
+    function hasMiniProgramBridge() {
+        try {
+            return typeof wx !== "undefined" && !!wx.miniProgram;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function enforceDemoHiddenButtons() {
+        if (!shouldHideButtons()) return;
+        if (document.getElementById('demoHideBtnsStyle')) return;
+
+        const style = document.createElement('style');
+        style.id = 'demoHideBtnsStyle';
+        style.textContent = '#moreLink,#makeLink{display:none !important;visibility:hidden !important;opacity:0 !important;pointer-events:none !important;}';
+        document.head.appendChild(style);
+    }
+
+    function resolveMusicUrl(td) {
+        return firstNotEmpty([
+            td.music_url,
+            td.music,
+            getNestedValue(td, 'data.music_url'),
+            getNestedValue(td, 'data.music'),
+            getNestedValue(td, 'cate.music_url'),
+            getNestedValue(td, 'cate.music_url_dy'),
+            getNestedValue(td, 'data.cate.music_url'),
+            getNestedValue(td, 'data.cate.music_url_dy')
+        ]);
+    }
+
+    function isTvTemplate() {
+        try {
+            return !!(
+                window.templateData &&
+                window.templateData.templateInfo &&
+                window.templateData.templateInfo.path &&
+                window.templateData.templateInfo.path.indexOf('template/text/tv') !== -1
+            );
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function initIframe() {
+        if (iframeInited) return;
+
+        const td = getSafeTemplateData();
+
+        if (myFrame && td && td.templateInfo && td.templateInfo.path) {
+            const path = td.templateInfo.path;
+            const versionId = td.versionId || Date.now();
+            const iframeUrl = new URL(TEMPLATE_IFRAME_HOST + '/' + path + '/index.html');
+            iframeUrl.searchParams.set('v', versionId);
+            if (isDemoMode()) {
+                iframeUrl.searchParams.set('is_demo', '1');
+            }
+            if (shouldHideButtons()) {
+                iframeUrl.searchParams.set('hide_btns', '1');
+            }
+            myFrame.src = iframeUrl.toString();
+            iframeInited = true;
+        }
+    }
+
+    function isMiniProgramEnv() {
+        return new Promise((resolve) => {
+            let finished = false;
+
+            const done = (value) => {
+                if (finished) return;
+                finished = true;
+                resolve(!!value);
+            };
+
+            try {
+                if (typeof wx === "undefined" || !wx.miniProgram) {
+                    return done(false);
+                }
+
+                const timer = setTimeout(() => done(false), 800);
+
+                wx.miniProgram.getEnv((res) => {
+                    clearTimeout(timer);
+                    done(!!(res && res.miniprogram));
+                });
+            } catch (e) {
+                done(false);
+            }
+        });
+    }
+
+    async function detectMiniProgramEnv() {
+        if (forceMiniProgramView) return true;
+        if (hasMiniProgramRuntimeFlag()) return true;
+
+        const envBySdk = await isMiniProgramEnv();
+        if (envBySdk) return true;
+
+        // 某些机型/容器里 getEnv 可能失效，但桥对象已存在且当前页又明确隐藏了 H5 按钮
+        if (shouldHideButtons() && hasMiniProgramBridge()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function ensureMiniProgramButtons() {
+        if (!backBtn) {
+            backBtn = document.createElement('a');
+            backBtn.id = 'backBtn';
+            backBtn.href = 'javascript:void(0)';
+            backBtn.innerText = '返回';
+            backBtn.style.cssText = `
+                position: fixed;
+                left: 0;
+                bottom: 72px;
+                width: 38vw;
+                height: 52px;
+                border-radius: 0 26px 26px 0;
+                background: #169BFF;
+                color: #fff;
+                text-decoration: none;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                z-index: 999999;
+                box-shadow: 0 6px 18px rgba(0,0,0,.18);
+                -webkit-tap-highlight-color: transparent;
+                touch-action: manipulation;
+                pointer-events: auto;
+                user-select: none;
+            `;
+            document.body.appendChild(backBtn);
+
+            const handleBack = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                try {
+                    if (typeof wx !== 'undefined' && wx.miniProgram) {
+                        wx.miniProgram.navigateBack();
+                    }
+                } catch (e) {}
+            };
+
+            backBtn.addEventListener('click', handleBack);
+            backBtn.addEventListener('touchend', handleBack, { passive: false });
+        }
+
+        if (!makeBtn) {
+            makeBtn = document.createElement('a');
+            makeBtn.id = 'makeBtn';
+            makeBtn.href = 'javascript:void(0)';
+            makeBtn.innerText = '制作';
+            makeBtn.style.cssText = `
+                position: fixed;
+                right: 0;
+                bottom: 72px;
+                width: 38vw;
+                height: 52px;
+                border-radius: 26px 0 0 26px;
+                background: #169BFF;
+                color: #fff;
+                text-decoration: none;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                z-index: 999999;
+                box-shadow: 0 6px 18px rgba(0,0,0,.18);
+                -webkit-tap-highlight-color: transparent;
+                touch-action: manipulation;
+                pointer-events: auto;
+                user-select: none;
+            `;
+            document.body.appendChild(makeBtn);
+
+            const handleMake = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                try {
+                    if (typeof wx !== 'undefined' && wx.miniProgram) {
+                        const makeId = window.templateData?.id || '';
+                        const makeTypeId = window.templateData?.typeId || '';
+                        const makeTypeVid = window.templateData?.versionId || '';
+                        let makeUrl = '/pages/make/index?id=' + makeId;
+                        if (makeTypeId !== '') {
+                            makeUrl += '&typeId=' + makeTypeId;
+                        }
+                        if (makeTypeVid !== '') {
+                            makeUrl += '&typevid=' + makeTypeVid;
+                        }
+                        const sourceNid = getCurrentNid();
+                        if (sourceNid) {
+                            makeUrl += '&fromHost=' + encodeURIComponent(location.hostname || '');
+                            makeUrl += '&fromNid=' + encodeURIComponent(sourceNid);
+                            makeUrl += '&refNid=' + encodeURIComponent(sourceNid);
+                        }
+
+                        const fallbackJump = function () {
+                            try {
+                                if (window.templateData && window.templateData.jump_make) {
+                                    location.href = withMiniProgramSource(window.templateData.jump_make);
+                                }
+                            } catch (err) {}
+                        };
+
+                        wx.miniProgram.navigateTo({
+                            url: makeUrl,
+                            fail: function () {
+                                try {
+                                    wx.miniProgram.redirectTo({
+                                        url: makeUrl,
+                                        fail: function () {
+                                            fallbackJump();
+                                        }
+                                    });
+                                } catch (err) {
+                                    fallbackJump();
+                                }
+                            }
+                        });
+                    }
+                } catch (e) {}
+            };
+
+            makeBtn.addEventListener('click', handleMake);
+            makeBtn.addEventListener('touchend', handleMake, { passive: false });
+        }
+    }
+
+    function showMiniProgramButtons() {
+        ensureMiniProgramButtons();
+
+        if (moreLinkBtn) moreLinkBtn.style.display = 'none';
+        if (makeLinkBtn) makeLinkBtn.style.display = 'none';
+
+        if (backBtn) backBtn.style.display = 'flex';
+
+        if (makeBtn) {
+            makeBtn.style.display = isDemoMode() ? 'none' : 'flex';
+        }
+    }
+
+    function showH5Buttons() {
+        if (shouldHideButtons()) {
+            if (moreLinkBtn) moreLinkBtn.style.display = 'none';
+            if (makeLinkBtn) makeLinkBtn.style.display = 'none';
+        } else {
+            if (moreLinkBtn) moreLinkBtn.style.display = 'flex';
+            if (makeLinkBtn) makeLinkBtn.style.display = 'flex';
+        }
+
+        if (backBtn) backBtn.style.display = 'none';
+        if (makeBtn) makeBtn.style.display = 'none';
+    }
+
+    function syncTemplateDataToStorage() {
+        try {
+            localStorage.setItem('templateDate', JSON.stringify(window.templateData || {}));
+        } catch (e) {}
+    }
+
+    function initOuterMusic() {
+        const td = getSafeTemplateData();
+
+        if (isTvTemplate()) {
+            outerMusicDisabled = true;
+            try {
+                if (music) {
+                    music.pause();
+                    music.currentTime = 0;
+                    music.removeAttribute('src');
+                    music.src = '';
+                    try { music.load(); } catch (e) {}
+                }
+            } catch (e) {}
+
+            if (musicBtn) {
+                musicBtn.style.display = 'none';
+                musicBtn.classList.remove('playing');
+            }
+            return;
+        }
+
+        outerMusicDisabled = false;
+
+        const musicUrl = resolveMusicUrl(td);
+        if (musicUrl) {
+            music.src = musicUrl;
+            try { music.load(); } catch (e) {}
+        } else {
+            music.removeAttribute('src');
+            music.src = '';
+            try { music.load(); } catch (e) {}
+        }
+
+        updateMusicBtnState();
+    }
+
+    function updateMusicBtnState() {
+        if (!musicBtn) return;
+
+        if (isTvTemplate() || outerMusicDisabled) {
+            musicBtn.style.display = 'none';
+            musicBtn.classList.remove('playing');
+            return;
+        }
+
+        if (!music || !music.src) {
+            musicBtn.style.display = 'none';
+            musicBtn.classList.remove('playing');
+            return;
+        }
+
+        musicBtn.style.display = 'flex';
+        if (music.paused) {
+            musicBtn.classList.remove('playing');
+        } else {
+            musicBtn.classList.add('playing');
+        }
+    }
+
+    function safePlayOuterMusic() {
+        if (outerMusicDisabled || isTvTemplate()) return;
+        if (!music || !music.src) return;
+
+        try {
+            const p = music.play();
+            if (p && typeof p.catch === 'function') {
+                p.catch(() => {});
+            }
+        } catch (e) {}
+        updateMusicBtnState();
+    }
+
+    function safePauseOuterMusic() {
+        if (!music) return;
+        try { music.pause(); } catch (e) {}
+        updateMusicBtnState();
+    }
+
+    function triggerOpenAction() {
+        const openBox = document.querySelector('.open-box');
+
+        if (openBox) {
+            openBox.style.display = 'none';
+            openBox.style.pointerEvents = 'none';
+            openBox.style.opacity = '0';
+            openBox.style.visibility = 'hidden';
+        }
+
+        if (!isTvTemplate()) {
+            safePlayOuterMusic();
+
+            setTimeout(() => {
+                if (myFrame && myFrame.contentWindow) {
+                    try {
+                        myFrame.contentWindow.postMessage('triggerOpen', '*');
+                        myFrame.contentWindow.postMessage({ type: 'triggerOpen' }, '*');
+                    } catch (e) {}
+                }
+            }, 120);
+            return;
+        }
+
+        if (myFrame && myFrame.contentWindow) {
+            try {
+                myFrame.contentWindow.postMessage({
+                    type: 'outerReady',
+                    data: getSafeTemplateData()
+                }, '*');
+            } catch (e) {}
+        }
+    }
+
+    function bindOpenBtn() {
+        const openBtn = document.getElementById('openBtn');
+        const openBox = document.querySelector('.open-box');
+
+        if (openBtn) {
+            const handleUserOpen = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                triggerOpenAction();
+            };
+
+            openBtn.addEventListener('click', handleUserOpen, true);
+            openBtn.addEventListener('touchstart', handleUserOpen, { passive: false, capture: true });
+            openBtn.addEventListener('touchend', handleUserOpen, { passive: false, capture: true });
+        }
+
+        if (openBox) {
+            openBox.addEventListener('click', function (e) {
+                if (e.target === openBox) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    triggerOpenAction();
+                }
+            });
+        }
+
+        document.addEventListener('click', function (e) {
+            const btn = e.target && e.target.closest ? e.target.closest('#openBtn') : null;
+            if (btn) {
+                e.preventDefault();
+                e.stopPropagation();
+                triggerOpenAction();
+            }
+        });
+    }
+
+    function bindH5MakeLink() {
+        if (!makeLinkBtn) return;
+
+        makeLinkBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (!window.templateData || !window.templateData.jump_make) return;
+            location.href = withMiniProgramSource(window.templateData.jump_make);
+        });
+    }
+
+    function bindMusicBtn() {
+        if (!musicBtn || !music) return;
+
+        musicBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (outerMusicDisabled || isTvTemplate()) return;
+            if (!music.src) return;
+
+            if (music.paused) {
+                safePlayOuterMusic();
+            } else {
+                safePauseOuterMusic();
+            }
+        });
+
+        music.addEventListener('play', updateMusicBtnState);
+        music.addEventListener('pause', updateMusicBtnState);
+        music.addEventListener('ended', updateMusicBtnState);
+    }
+
+    function reportPageView(nid) {
+        if (!nid) return;
+
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+        fetch(`https:https:https://wan55.cn/api/reportPageView?nid=${nid}`, {
+            method: 'GET',
+            signal: controller.signal
+        })
+        .then(res => res.json())
+        .then(res => {
+            clearTimeout(timeoutId);
+
+            if (res.code === 200 && typeof res.views === 'number') {
+                window.templateData.views = res.views;
+                syncTemplateDataToStorage();
+
+                if (myFrame && myFrame.contentWindow) {
+                    myFrame.contentWindow.postMessage({
+                        type: 'updateViews',
+                        views: res.views
+                    }, '*');
+                }
+            }
+        })
+        .catch(() => {
+            clearTimeout(timeoutId);
+        });
+    }
+
+    function postTemplateDataToIframe() {
+        if (!myFrame || !myFrame.contentWindow) return;
+        try {
+            myFrame.contentWindow.postMessage({
+                type: 'templateData',
+                data: window.templateData || {}
+            }, '*');
+        } catch (e) {}
+    }
+
+    function bindIframeLoad() {
+        if (!myFrame) return;
+
+        myFrame.addEventListener('load', function () {
+            syncTemplateDataToStorage();
+            postTemplateDataToIframe();
+        });
+    }
+
+    function bindMessageBridge() {
+        window.addEventListener('message', function (event) {
+            const msg = event.data;
+            if (!msg) return;
+
+            if (msg === 'requestTemplateData') {
+                postTemplateDataToIframe();
+                return;
+            }
+
+            if (typeof msg === 'object') {
+                if (msg.type === 'requestTemplateData') {
+                    postTemplateDataToIframe();
+                    return;
+                }
+
+                if (msg.type === 'syncStorage') {
+                    syncTemplateDataToStorage();
+                    return;
+                }
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        enforceDemoHiddenButtons();
+        syncTemplateDataToStorage();
+        initOuterMusic();
+        bindIframeLoad();
+        bindMessageBridge();
+        initIframe();
+        bindOpenBtn();
+        bindH5MakeLink();
+        bindMusicBtn();
+
+        const inMiniProgramEnv = await detectMiniProgramEnv();
+
+        if (inMiniProgramEnv) {
+            showMiniProgramButtons();
+        } else {
+            showH5Buttons();
+        }
+
+        if (window.templateData && window.templateData.nid) {
+            reportPageView(window.templateData.nid);
+        }
+    });
+</script>
+
+<script>
+    let host = window.location.hostname;
+    var _hmt = _hmt || [];
+    (function() {
+        var tid = "530cca224da9770059b6caf6aa908556";
+        if (host.startsWith('wechat.3') || host.startsWith('60')) {
+            tid = "530cca224da9770059b6caf6aa908556";
+        }
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + tid;
+        document.head.appendChild(hm);
+    })();
+</script>
+<script>
+(function () {
+  var badPart = "v2-00f1d7c256cb394ec9e9510995cbf17e.jpeg";
+  var good = "https://c.zf2026.cn/template/images/latter.jpg";
+
+  function fix() {
+    var img = document.querySelector('#openBtn img');
+    if (!img) return;
+    var src = img.getAttribute('src') || '';
+    if (src.indexOf(badPart) !== -1) {
+      img.setAttribute('src', good);
+      img.src = good;
+    }
+    img.onerror = function () { this.src = good; };
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fix);
+  } else {
+    fix();
+  }
+  setTimeout(fix, 300);
+})();
+</script>
+
+
+
+</body></html>
