@@ -1,39 +1,39 @@
-<!DOCTYPE html>
+
 <!-- saved from url=(0068)https://daima.se22.cn/template/barrage/total/index.html?v=1779199489 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>❄ 冬至好运爆发</title>
-    <script src="./script(1).js"></script>
-    <script src="./script2.js"></script>
-    <style>
+    <脚本 源="./script(1).js"></脚本>
+    <脚本 源="./script2.js"></脚本>
+    <样式>
         /* 自定义动画 */
-        @keyframes fall {
-            0% { transform: translateY(-10vh) rotate(0deg); }
+        @关键帧 秋天 {
+            0% { 变换: 纵向平移(-10vh) 旋转(0度); }
             100% { transform: translateY(110vh) rotate(360deg); }
         }
         @keyframes popupIn {
             from { transform: scale(0) translateY(20px); opacity: 0; }
             to { transform: scale(1) translateY(0); opacity: 1; }
         }
-        @keyframes steam-rise {
+        @keyframes 蒸汽上升 {
             0% { transform: translateY(0) scale(1); opacity: 0; }
-            20% { opacity: 0.6; }
-            50% { opacity: 0.4; }
-            100% { transform: translateY(-60px) scale(3); opacity: 0; }
-        }
-        @keyframes loading {
-            0% { width: 0%; opacity: 0.5; }
-            50% { width: 100%; opacity: 1; }
-            100% { width: 0%; opacity: 0.5; left: 100%; }
-        }
-        /* 粒子爆炸动画 */
-        @keyframes particle-fade {
-            0% { transform: translate(0, 0) scale(1); opacity: 1; }
-            100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
-        }
+            20% { 不透明度: 0.6; }20% { opacity: 0.6; }
+            50% { 不透明度: 0.4; }50% { opacity: 0.4; }
+            100% { transform: translateY(-60px) scale(3); opacity: 0; }100% { transform: translateY(-60px) scale(3); opacity: 0; }
+        }}
+        @keyframes loading {@keyframes loading {
+            0% { 宽度: 0%; 不透明度: 0.5; }0% { width: 0%; opacity: 0.5; }
+            50% { 宽度: 100%; 不透明度: 1; }50% { width: 100%; opacity: 1; }
+            100% { 宽度: 0%; 不透明度: 0.5; 左: 100%; }100% { width: 0%; opacity: 0.5; left: 100%; }
+        }}
+        /* 粒子爆炸动画 *//* 粒子爆炸动画 */
+        @keyframes particle-fade {@keyframes particle-fade {
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+        }}
 
-        /* 实用 CSS 类 */
+        /* 实用 CSS 类 *//* 实用 CSS 类 */
         .steam-particle {
             position: absolute;
             background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
@@ -147,12 +147,29 @@
     <div id="popup-layer" class="absolute inset-0 z-50 overflow-hidden pointer-events-none hidden"></div>
     
 <script>
-let dataInfo = JSON.parse(localStorage.getItem('templateDate'));
-document.getElementById("title").innerText = dataInfo.title;
-document.getElementById("ftitle").innerText = dataInfo.ftitle;
-document.getElementById("bg-layer").style.backgroundImage = "url('"+ dataInfo.backgroundImg +"')";
+// 1. 安全读取本地存储数据，如果没有就用默认值
+let dataInfoStr = localStorage.getItem('templateDate');
+let dataInfo = dataInfoStr ? JSON.parse(dataInfoStr) : {
+    title: "限定礼物", // 这里改成你页面的标题
+    ftitle: "你有一份限定款神秘礼物，确定要打开吗？", // 这里改成你页面的副标题
+    backgroundImg: "" // 如果有背景图也可以在这里写死，或者留空用默认背景
+};
 
+// 2. 安全操作DOM元素，防止找不到元素报错
+let titleEl = document.getElementById("title");
+if (titleEl) {
+    titleEl.innerText = dataInfo.title;
+}
 
+let ftitleEl = document.getElementById("ftitle");
+if (ftitleEl) {
+    ftitleEl.innerText = dataInfo.ftitle;
+}
+
+let bgLayerEl = document.getElementById("bg-layer");
+if (bgLayerEl && dataInfo.backgroundImg) {
+    bgLayerEl.style.backgroundImage = "url('" + dataInfo.backgroundImg + "')";
+}
 const bgMusic = document.getElementById("bgMusic");
 bgMusic.src = dataInfo.music;
 
